@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0;
+}
+.topbare{
+    text-align: center;
+    line-height: 1.9;
+    background-color: #0A192F;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 0;
+    width: 100%;
+    height: 110px;
+    top: 0;
+}
+.topbare a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: sans-serif;
+}
+.topbare .nom{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.topbare-navigation a{
+    padding-left: 20px;
+}
+.topbare-navigation a:hover, a.actif{
+    text-decoration: underline;
+    color: #64FFDA;
+    transition: .3s;
+}
+.container{
+    margin: 20px;
+    margin-top: 150px;
+    z-index: 1;
+    font-family: sans-serif;
+    line-height: 1.3;
+
+}
+.container p{
+    font-size: 20px;
+}
+.main{
+    text-align: center;
+}
+.section{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.section a:hover{
+    transform: scale(1.1);
+    transition: .3s;
+    box-shadow: 1px 1px 4px 4px #0A192F ;
+}
+.section-resp{
+    text-align: center;
+}
+footer{
+   padding: 5px;
+   text-align: center;
+   padding:15px 0;
+
+}
+@media only screen and (min-width:1100px) {
+    .topbare{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        height: 80px;;
+    }
+    .container{
+        display: flex;
+        gap: 50px;
+    }
+    .main{
+        width: calc(100%-800px);
+        margin-top: 100px;
+    }
+    .principal{
+        padding-top: 100px;
+        margin: 10px;
+    }
+    .aside{
+        width: 800px;
+    }
+}

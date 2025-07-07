@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0;
+}
+.topbare{
+    text-align: center;
+    line-height: 1.9;
+    background-color: #0A192F;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 0;
+    width: 100%;
+    height: 110px;
+    top: 0;
+}
+.topbare a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: sans-serif;
+}
+.topbare .nom{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.topbare-navigation a{
+    padding-left: 20px;
+}
+.topbare-navigation a:hover,  a.actif{
+    text-decoration: underline;
+    color: #64FFDA;
+    transition: .3s;
+}
+.container{
+    margin-top: 200px;
+    z-index: 1;
+
+}
+.main{
+    margin-top: 20px;
+}
+.profil{
+    text-align: center;
+}
+.profil img{
+    border-radius: 50%;
+}
+.aside{
+    text-align: center;
+    margin-top: 20px;
+}
+.aside p{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #0A192F;
+}
+.avant{
+    font-family: sans-serif;
+    line-height: 0.2;
+}
+.avant h1{
+    color: #0A192F;
+}
+.avant p{
+    font-family: serif;
+    font-size: 30px;
+    font-style: italic;
+    color:#0A192F;
+    padding: 10px;
+    margin-left:90px;
+    margin-right: 90px;
+}
+.monnom{
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+button{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #0A192F;
+    border: none;
+    border-radius: 10px;
+    border-color: #0A192F;
+}
+button:hover{
+    box-shadow: 1px 1px 4px 4px #64FFDA;
+    transform: scale(1.1);
+    transition: .3s;
+}
+button a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: sans-serif;
+}
+.footer{
+   padding: 5px;
+   text-align: center;
+   padding:15px 0;
+
+}
+.logo a{
+    margin-right: 10px;
+}
+@media only screen and (min-width:1100px) {
+    .topbare{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        height: 80px;;
+    }
+    .container{
+        display: flex;
+        gap: 200px;
+        padding-left: 200px;
+        text-align: center;
+        padding-right: 100px;
+        height: auto;
+
+    }
+    .profil img{
+    border-radius: 50%;
+    }
+    .footer {
+        overflow: hidden;
+        margin-top: 40px;
+        background-color: white;
+    }
+}
+
