@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0 ;
+}
+.topbar{
+    position: absolute;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(248, 228, 190);
+    padding: 20px;
+    z-index: 3;
+}
+.topbar-navigation a{
+    padding-right: 50px;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(134, 129, 129);
+    transition: .3s;
+}
+.topbar-navigation a:hover{
+    color: black;
+}
+.topbar-navigation{
+    float: left;
+}
+.social a{
+    padding-left: 15px;
+    opacity: 0.4;
+    transition: .3s;
+}
+.social a:hover{
+    opacity: 1;
+}
+.social{
+    float: right;
+}
+.labaniere{
+    height: 250px;
+    background-image: url(Icones/titre.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    display: flex;
+}
+.main{
+    width: calc(100%-350px);
+}
+.article{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+.article h1{
+    color: orange;
+    font-size: 30px;
+}
+.article p{
+    color:rgb(134, 129, 129) ;
+    line-height: 1.4;
+    font-family: sans-serif;
+}
+.image{
+    float: left;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.image:hover{
+    transform: scale(1.1);
+    transition: 2s;
+}
+.aside{
+    width: 350px;
+    padding: 15px;
+    background-color: rgb(248, 228, 190);
+    line-height: 1.9;
+}
+.aside h2{
+    color: white;
+    font-size:25px;
+    margin-top: 30px;
+}
+.aside p{
+      color: white;
+     font-size: 17px;
+     font-family: sans-serif;
+}
+.aside a{
+    color: rgb(134, 129, 129);
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: .3s;
+}
+.aside a:hover{
+    color: black;
+    text-decoration: underline;
+}
+.aside ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer{
+    clear: both;
+    background-color: rgb(248, 228, 190);
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 15px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.footer a{
+    color:rgb(134, 129, 129);
+    text-decoration: none;
+    transition: 3s;
+}
+.footer a:hover{
+    color: black;
+    text-decoration: underline;
+}
+@media only screen and (max-width:635px) {
+    .topbar{
+        position: static;
+        height: 100px;
+        text-align: center;
+    }
+    .topbar-navigation{
+        float: none;
+        margin-bottom: 15px;
+        padding-left: 50px;
+    }
+    .topbar-navigation a{
+        white-space: nowrap;
+    }
+    .social{
+        float: none;
+    }
+}
+@media only screen and (max-width:950px) {
+    .container{
+        display: block;
+    }
+    .main{
+        width: 100%;
+    }
+    .aside{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:565px) {
+    .article{
+        position: static;
+        text-align: center;
+    }
+    .image{
+        float: none;
+        margin: 12px;
+    }
+}
