@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes compétences</title>
+    <link rel="stylesheet" href="Competence.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Apropos.html">À propos</a></li>
+                <li><a href="Competence.html">Compétence</a></li>
+                <li><a href="MesProjets.html">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="main">
+             <p class="Bienvenue">
+                Mes compétences
+            </p>
+            <p>
+                En tant que développeur web , j'ai acquis une bonne maîtise des langages
+                de base du web : <strong>HTML, CSS </strong> et <strong>JavaScript</strong>. Ces 
+                outils me permettent de concevoir des pages web structurées, esthétiques et 
+                interactives.
+            </p>
+            <p>
+                Je continue à me former chaque jour approfondir mes connaissances, améliorer mes
+                pratiques et élargir mes compétences vers des technologies plus avancées.
+                Ma motivation et ma curiosité sont mes meilleurs atouts pour progresser constamment
+                dans ce domaine en évolution rapide.
+            </p>
+        </main>
+        <aside class="aside">
+            <section>
+                <img src="LOGO/HTML.webp" alt="HTML">
+                <p id="texte">
+                    Ma solide maîtise du langage HTML me permet de structurer efficacement<span id="suite" style="display:none ;"> des pages web 
+                    claires, bien organisées et adaptées aux standars du web moderne Grâce à cette compétence,
+                    je peux construire des bases solides pour tout type de site, en assurant une hiérachie du contenu,
+                    une accessibilité optimale et une compatibilité sur tous les navigateurs. HTML est pour moi bien 
+                    plus qu'un langage de balisage: c'est le socle sur lequel je construis chaque projet avec précision et 
+                    rigueur.</span>
+                    <span id="points">...</span>
+                    <button id="btnToggle" onclick="toggleTexte()" style="border: none;">Lire la suite</button>
+                </p>
+            </section>
+            <section>
+                <img src="LOGO/CSS.webp" alt="CSS">
+                <p id="texte2">
+                    Le CSS est l'outil qui me permet de donner vie aux pages web. <span id="suite2" style="display: none;">Grâce à une bonne  maîtise
+                    de cette technologie, je suis capable de transformer une structure brute en interface esthétique,
+                    responsive et agréable à utiliser. J'utilise le CSS pour gérer la mise en page, les couleurs, les 
+                    typographies, les souci du détail me pousse à concevoir des designs soignés et harmonieux, fidèles 
+                    aux attentes des utilisateurs et aux standars du web.</span>
+                    <span id="points2">...</span>
+                    <button id="btnToggle2" onclick="toggleTexte2()" style="border: none;">Lire la suite</button>
+                </p>
+            </section>
+            <section>
+                <img src="LOGO/JAVASCRIPT.webp" alt="JAVASCRIPT">
+                <p id="texte3">
+                    Actuellement en pleine phase d'apprentissage du JavaScript, je découvre<span id="suite3" style="display: none;">chaque jour le potentiel de 
+                    ce langage puissant pour rendre les sites web dynamique et interactifs. Pas à pas, je développe ma 
+                    compréhension des concepts essentiels comme les variables, les fonctions, les conditions et les événements.
+                    Ma curiosité, ma régularité et ma passion pour le développement m'aident à progresser rapidement. Mon objectif est 
+                    de  maîtiser le JavaScript pour créer des expériences utilisateurs plus vivantes, modernes et efficaces.</span> 
+                    <span id="points3">...</span>
+                    <button id="btnToggle3" onclick="toggleTexte3()" style="border: none;">Lire la suite</button>
+                </p>
+            </section>
+        </aside>
+    </div>
+    <footer class="footer">
+        <a title="Whatsapp" href="https://wa.me/+243830193646"><img src="LOGO/whatsapp.png" alt="whatsapp"></a>
+        <a title="Facebook" href="https://www.facebook.com/profile.php?id=100074972167990"><img src="LOGO/facebook.png" alt="facebook"></a>
+        <a title="Instagram" href="https://instagram.com/graciel.ebanza"><img src="LOGO/instagram.png" alt="instagram"></a>
+    </footer>
+</body>
+</html>
