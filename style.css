@@ -1,0 +1,41 @@
+nav{
+    background-image: url(fond/Untitled5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body{
+    background-image: url(fond/Untitled5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main{
+    text-align: center;
+    
+}
+.bienvenue{
+    font-style: italic;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+footer{
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-image: url(fond/Untitled5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+footer img{
+    opacity: 0.5;
+}
+.projet{
+    font-weight: bold;
+}
