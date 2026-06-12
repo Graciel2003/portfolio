@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+.header{
+    /*background-color:red;*/
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+.burger span{
+    display: block;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+}
+.header .navigation{
+    display: flex;
+    align-items: center;
+}
+.header .navigation a{
+    text-decoration: none;
+    color: black;
+    padding: 0px 0px 0px 15px;
+}
+.header .navigation .actif{
+    text-decoration: underline;
+    color: blue;
+    text-underline-offset: 28px;
+    text-decoration-thickness: 2px;
+}
+@media (max-width: 768px) {
+    .burger{
+        display:flex;
+    }
+
+    .header .navigation{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        left: 20px;
+        flex-direction: column;
+        gap: 10px;
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        z-index: 10;
+    }
+
+    .header.menu-open .navigation{
+        display: flex;
+    }
+
+    .header .navigation a{
+        padding: 10px 0;
+    }
+
+    /* Remove underline for the active link on small screens */
+    .header .navigation .actif{
+        text-decoration: none;
+        color: blue;
+    }
+
+    .header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+.header .nom .blue{
+    color: blue;
+}
+.header .navigation a{
+    text-decoration: none;
+    color: black;
+    padding: 0px 0px 0px 15px;
+}
+.header .navigation .actif{
+    text-decoration: underline;
+    color: blue;
+    text-underline-offset: 28px;
+    text-decoration-thickness: 2px;
+}
+/* ---------------main-------------- */
+.main{
+    background-color:rgb(243, 243, 253);
+    display: grid;
+    grid-template-columns: 700px 1fr;
+    grid-template-rows: 400px;
+    padding-left: 30px;
+}
+.main .presentation{
+    /*background-color: red;*/
+    padding: 30px;
+    /*background-color: blue;*/
+    padding-top: 70px;
+}
+.main .p1, .p2{
+    color: blue;
+}
+.main, .p2{
+    margin-bottom: 15px;
+}
+.main .p3 p{
+    color: rgb(65, 63, 63);
+}
+.bouton {
+    margin-top: 25px;
+}
+.bouton  .projets{
+    margin-right: 15px;
+    color: white;
+    background-color: blue;
+
+}
+.bouton  .cv{
+    color: blue;
+    border: 1px solid blue;
+}
+.icon{
+    height: 30px;
+    width: 30px;
+    margin-right:5px;
+}
+.icon img{
+    width: 10px;
+}
+.bouton button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+
+}
+.moi{
+   background-image: url("./images/troisieme.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   min-height: 400px;
+}
+/* --------------------aside---------------------*/
+.aside{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.aside h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.competences{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 250px;
+    gap: 5px;
+}
+.competences div{
+    border: 1px solid rgb(163, 155, 155);
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    height: 260px;
+}
+.competences div section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 70px;
+}
+.progress-bar{
+    height: 20px;
+    background-color:blue;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    top: 0;
+    background-color:blue;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .aside {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .competences {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header.menu-open .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header .navigation a {
+        padding: 0;
+    }
+
+    .main {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .main .presentation {
+        padding-top: 30px;
+    }
+
+    .bouton {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bouton .projets,
+    .bouton .cv {
+        width: 100%;
+        text-align: center;
+    }
+
+    .moi {
+        min-height: 280px;
+    }
+
+    .competences {
+        grid-template-columns: 1fr;
+    }
+
+    .competences div {
+        height: auto;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .main {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .aside {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .main .presentation {
+        padding-top: 20px;
+    }
+
+    .moi {
+        min-height: 240px;
+    }
+
+    .competences div {
+        padding: 12px;
+    }
+}
