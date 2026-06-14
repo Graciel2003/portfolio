@@ -6,6 +6,77 @@ body{
     font-family: sans-serif;
     line-height: 1.5;
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.header .navigation a {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.main .presentation {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.moi {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.competences div {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.etalage .produit {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.cursus {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.valeurs {
+    animation: fadeIn 0.8s ease-out;
+}
 .header{
     /*background-color:red;*/
     padding: 20px;
@@ -43,10 +114,7 @@ body{
     padding: 0px 0px 0px 15px;
 }
 .header .navigation .actif{
-    text-decoration: underline;
-    color: blue;
-    text-underline-offset: 28px;
-    text-decoration-thickness: 2px;
+    color: rgb(78, 78, 85);
 }
 @media (max-width: 768px) {
     .burger{
@@ -94,12 +162,15 @@ body{
     text-decoration: none;
     color: black;
     padding: 0px 0px 0px 15px;
+    transition: color 0.3s ease;
+}
+
+.header .navigation a:hover {
+    color: blue;
 }
 .header .navigation .actif{
-    text-decoration: underline;
+    text-decoration: none;
     color: blue;
-    text-underline-offset: 28px;
-    text-decoration-thickness: 2px;
 }
 /* ---------------main-------------- */
 .main{
@@ -166,7 +237,12 @@ body{
     padding: 10px;
     border-radius: 5px;
     border: none;
+    transition: all 0.3s ease;
+}
 
+.bouton button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .moi{
    background-image: url("./images/troisieme.png");
@@ -197,6 +273,12 @@ aside h3{
     background-color: white;
     border-radius: 5px;
     height: 260px;
+    transition: all 0.3s ease;
+}
+
+.competences div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 .competences div section{
     display: flex;
@@ -270,6 +352,12 @@ aside h3{
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.cursus:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 .image_cursus{
     width: 80px;
@@ -312,6 +400,12 @@ aside h3{
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.valeurs:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
 }
 .valeurs .cursus1, .cursus2, .cursus3{
     margin-bottom: 50px;
@@ -367,6 +461,67 @@ aside h3{
     background-position: center;
 
 }
+/*------------ page projets --------------*/ 
+.projet{
+    background-image: url("./images/bon.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mes_projets{
+    padding:30px;
+}
+.etalage{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+.etalage .produit{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.14), 0 6px 16px rgba(0, 0, 0, 0.09);
+    transition: all 0.3s ease;
+}
+
+.etalage .produit:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+.etalage .produit button{
+    color: blue;
+}
+.etalage .produit h4{
+    color: blue;
+}
+.etalage .produit p{
+    color:rgb(65, 63, 63);
+}
+.etalage .fleche a{
+    text-decoration: none;
+    color: blue;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+
+.etalage .fleche a:hover {
+    color: rgb(0, 0, 200);
+}
+
+.fleche{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    gap: 8px;
+}
+
+.fleche img {
+    transition: transform 0.3s ease;
+}
+
+.fleche a:hover img {
+    transform: translateX(5px);
+}
 /* Responsive */
 @media (max-width: 1024px) {
     .header {
@@ -411,6 +566,11 @@ aside h3{
 
     .competences {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .etalage {
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
     }
 }
@@ -479,6 +639,11 @@ aside h3{
         height: auto;
     }
 
+    .etalage {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
     .footer {
         text-align: center;
         justify-content: center;
@@ -518,5 +683,10 @@ aside h3{
 
     .competences div {
         padding: 12px;
+    }
+
+    .etalage {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 }
