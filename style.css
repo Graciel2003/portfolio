@@ -131,11 +131,28 @@ body{
     margin-right: 15px;
     color: white;
     background-color: blue;
+    margin-left: 15px;
 
+}
+.bouton  .projets a{
+    text-decoration: none;
+    color: white;
 }
 .bouton  .cv{
     color: blue;
     border: 1px solid blue;
+}
+.bouton  .cv a{
+    text-decoration: none;
+    color: blue;
+}
+.bouton .whatsapp{
+    color: green;
+    border: 1px solid green;
+}
+.bouton .whatsapp a{
+    text-decoration: none;
+    color: green;
 }
 .icon{
     height: 30px;
@@ -159,11 +176,12 @@ body{
    min-height: 400px;
 }
 /* --------------------aside---------------------*/
-.aside{
+aside, .aside{
     padding-left: 30px;
     padding-right: 30px;
 }
-.aside h3{
+.aside h3,
+aside h3{
     text-align: center;
     margin-bottom: 10px;
 }
@@ -201,9 +219,107 @@ body{
     top: 0;
     background-color:blue;
     margin-top: 50px;
-    padding: 20px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
 }
+.footer .copy{
+    display: flex;
+    gap: 5px;
+    width: 300px;
+    align-items: center;
+}
+.footer .reseaux{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer .reseaux img{
+    opacity: 0.5;
+}
+/* -----------------A propos-------------------*/
+.parcours{
+    /*background-color: brown;*/
+    padding-left: 30px;
+}
+.parcours h1{
+    margin-bottom: 20px;
+}
+.parcours p{
+    color: rgb(65, 63, 63);
+}
+.parcours .section_apprentissage{
+    display: grid;
+    grid-template-columns: 700px 1fr;
+    grid-template-rows: 400px;
+}
+.image_cursus{
+    width: 80px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+}
+.cursus1, .cursus2, .cursus3{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    border: none;
+}
+.cursus1 .image_cursus {
+    background-image: url("./icons/etude.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cursus2 .image_cursus {
+    background-image: url("./icons/app.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cursus3 .image_cursus {
+    background-image: url("./icons/dev.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.precision .date {
+    color: blue;
+}
+.ordinateur{
+    text-align: center;
+}
+.ordinateur img{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 3px 5px 3px gray;
+    border: none;
+}
+.description .phot{
+    width: 80px;
+    height: 50px;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+}
+.description .etude, .objectif{
+    display: flex;
+    gap: 20px;
+}
+.description .etude .phot{
+    background-image: url("./icons/etude.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.description .objectif .phot{
+   background-image: url("./icons/but.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 
+}
 /* Responsive */
 @media (max-width: 1024px) {
     .header {
@@ -218,9 +334,32 @@ body{
         padding-right: 20px;
     }
 
-    .aside {
+    aside, .aside {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .parcours .section_apprentissage {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+
+    .parcours .section_apprentissage section,
+    .parcours .section_apprentissage .ordinateur {
+        width: 100%;
+    }
+
+    .parcours .cursus1,
+    .parcours .cursus2,
+    .parcours .cursus3 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .parcours .ordinateur img {
+        width: 100%;
+        height: auto;
     }
 
     .competences {
@@ -264,13 +403,25 @@ body{
     }
 
     .bouton .projets,
+    .bouton .whatsapp,
     .bouton .cv {
         width: 100%;
         text-align: center;
     }
-
+    .bouton .projets{
+        margin-left: 0;
+    }
     .moi {
         min-height: 280px;
+    }
+
+    aside, .parcours {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .parcours .section_apprentissage {
+        gap: 15px;
     }
 
     .competences {
@@ -297,7 +448,7 @@ body{
         padding-right: 12px;
     }
 
-    .aside {
+    aside, .aside {
         padding-left: 12px;
         padding-right: 12px;
     }
